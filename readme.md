@@ -3,7 +3,7 @@
 This repository containing scripts, documentation and data around the project #DieDatenlaube - increasing visibality and discoverability of articles of Die Gartenlaube in Wikidata
 
 ## Documentation
-* [https://librerli.github.io/DieDatenlaube/index.html](Blogpost)
+* [Blogpost](https://librerli.github.io/DieDatenlaube/index.html)
 
 ## Scripts
 

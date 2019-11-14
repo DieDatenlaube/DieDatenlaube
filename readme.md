@@ -1,6 +1,6 @@
 # Die Datenlaube
 
-This repository containing scripts, documentation and data around the project #DieDatenlaube - increasing visibality and discoverability of articles of Die Gartenlaube in Wikidata
+This repository containing scripts, documentation and data around the project [#DieDatenlaube](https://twitter.com/search?q=%23DieDatenlaube&src=typed_query) - increasing visibality and discoverability of articles of Die Gartenlaube in Wikidata
 
 ## Documentation
 * [Blogpost](https://librerli.github.io/DieDatenlaube/index.html)

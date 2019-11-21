@@ -2,8 +2,8 @@
 
 This repository containing scripts, documentation and data around the project [#DieDatenlaube](https://twitter.com/search?q=%23DieDatenlaube&src=typed_query) - increasing visibality and discoverability of articles of Die Gartenlaube in Wikidata
 
-## Documentation
-* [Blogpost, 2019-11-14](https://diedatenlaube.github.io/DieDatenlaube/blogpost.html)
+## Blog
+* [Die Datenlaube Blog](https://diedatenlaube.github.io)
 
 ## Scripts
 

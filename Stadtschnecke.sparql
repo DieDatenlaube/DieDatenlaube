@@ -1,0 +1,11 @@
+#defaultView:BubbleChart
+SELECT ?StadtLabel (COUNT(*) AS ?count) WHERE {
+  hint:Query hint:optimizer "None".
+  ?Die_Gartenlaube wdt:P1433 wd:Q655617;
+    wdt:P921 ?Stadt.
+  ?Stadt (wdt:P31/(wdt:P279*)) wd:Q486972;
+    wdt:P625 ?coord.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+GROUP BY ?StadtLabel
+ORDER BY (?count)

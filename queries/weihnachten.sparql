@@ -1,0 +1,35 @@
+#Query all Gartenlaube articles with a main subject Christmas or a facet or subclass of Christmas or without a subject but the string "Weihnacht" within its label
+SELECT DISTINCT ?Die_Gartenlaube ?Die_GartenlaubeLabel ?zentrales_Thema ?zentrales_ThemaLabel ?image WHERE {
+  {
+    ?Die_Gartenlaube wdt:P1433 wd:Q655617;
+      (wdt:P921+) ?zentrales_Thema;
+      wdt:P577 ?pubdate;
+      wdt:P433 ?issue;
+      wdt:P304 ?pages.
+    OPTIONAL { ?Die_Gartenlaube wdt:P18 ?image. }
+    ?zentrales_Thema (wdt:P31/(wdt:P279*)) ?xmas.
+    ?xmas (wdt:P1269/(wdt:P279*)) wd:Q19809.
+  }
+  UNION
+  {
+    ?Die_Gartenlaube wdt:P1433 wd:Q655617;
+      (wdt:P921+) ?zentrales_Thema;
+      wdt:P577 ?pubdate;
+      wdt:P433 ?issue;
+      wdt:P304 ?pages.
+    BIND(wd:Q19809 AS ?zentrales_Thema)
+    OPTIONAL { ?Die_Gartenlaube wdt:P18 ?image. }
+  }
+  UNION
+  {
+    ?Die_Gartenlaube wdt:P1433 wd:Q655617;
+      wdt:P577 ?pubdate;
+      wdt:P433 ?issue;
+      wdt:P304 ?pages.
+    FILTER(NOT EXISTS { ?Die_Gartenlaube wdt:P921 _:b1. })
+    OPTIONAL { ?Die_Gartenlaube wdt:P18 ?image. }
+    ?Die_Gartenlaube rdfs:label ?Die_GartenlaubeLabel_.
+    FILTER(CONTAINS(?Die_GartenlaubeLabel_, "Weihnacht"@de))
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}

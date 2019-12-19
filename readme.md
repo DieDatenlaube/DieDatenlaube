@@ -12,7 +12,7 @@ This repository containing scripts, documentation and data around the project [#
 
 ## Queries
 * [Die Stadt- oder Siedlungsschnecke](queries/Stadtschnecke.sparql) - Räumliche Verteilung der Inhalte der Gartenlaube Artikel
-* [Weihnachten](queries/Weihnachten.sparql) - Abfrage aller Artikel mit Bezug zu Weihnachten per Schlagwort und Titelheuristik. 
+* [weihnachten](queries/Weihnachten.sparql) - Abfrage aller Artikel mit Bezug zu Weihnachten per Schlagwort und Titelheuristik. 
 
 ## Further information
 * https://de.wikisource.org/wiki/Wikisource:Wikidata 

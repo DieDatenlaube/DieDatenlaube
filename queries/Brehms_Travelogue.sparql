@@ -1,0 +1,15 @@
+#Reiseberichte_von_Alfred_Brehm_als_Timeline
+
+#defaultView:Timeline
+SELECT DISTINCT ?article ?articleLabel ?pubDate (SAMPLE(?image) AS ?image)
+WHERE
+{
+  ?article wdt:P1433 wd:Q655617.
+  ?article wdt:P50 wd:Q155112.
+  ?article wdt:P921 wd:Q1164267.
+  ?article wdt:P577 ?pubDate.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "de". }
+  optional {
+    ?article wdt:P18 ?image. 
+  }
+} GROUP BY ?article ?articleLabel ?pubDate

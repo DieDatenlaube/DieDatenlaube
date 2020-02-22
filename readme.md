@@ -18,3 +18,4 @@ This repository containing scripts, documentation and data around the project [#
 ## Further information
 * https://de.wikisource.org/wiki/Wikisource:Wikidata 
 * https://blog.wikimedia.de/2019/10/16/hilfe-fuer-die-datenlaube-mit-wikisourcewikidata-die-freie-quellensammlung-verbessern/
+* https://www.wikidata.org/wiki/Wikidata:WikiCite_Satellite_Cologne_2020/Submission/DieDatenlaube

@@ -14,7 +14,7 @@ This repository containing scripts, documentation and data around the project [#
 * [Die Stadt- oder Siedlungsschnecke](queries/Stadtschnecke.sparql) - Räumliche Verteilung der Inhalte der Gartenlaube Artikel
 * [weihnachten](queries/Weihnachten.sparql) - Abfrage aller Artikel mit Bezug zu Weihnachten per Schlagwort und Titelheuristik. 
 * [Brehms Reiseberichte](queries/Brehms_Travelogue.sparql) Timeline der naturkundlichen Berichte Alfred Brehms in der Gartenlaube.
-* Carl Ernst Bock: Gesundheitsratgeber mit Wikicite, #Bocknetz > w.wiki/HCr sowie (erweitert) #BockHatQuery > w.wiki/HdS  
+* Carl Ernst Bock: Gesundheitsratgeber mit Wikicite, #Bocknetz > https://w.wiki/HCr sowie (erweitert) #BockHatQuery > https://w.wiki/HdS  
 
 ## Further information
 * https://de.wikisource.org/wiki/Wikisource:Wikidata 

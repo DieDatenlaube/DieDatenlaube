@@ -15,7 +15,7 @@ Folgt man dem [Link](https://de.wikisource.org/wiki/Seite:Die_Gartenlaube_(1898)
 
 Nach der Korrektur von Fehlern kann unten der Seitenstatus auf /* Fertig */ (grüne Checkbox) geändert werden. Zu Beachten ist hier die korrekte Verwendung von Abschnittsmarkern ```<section begin=2 />``` und ```<section end=2 />``` für unseren späteren Artikel *Allerlei von Reinecke*.
 
-Mit dem Klick auf das Pfeilsymbol "/\" bzw. den Wikisource-Link mit einem [Link]((https://de.wikisource.org/wiki/Index:Die_Gartenlaube_(1898))"Index:Die_Gartenlaube_(1898)" sind weitere zu korrigierende Seiten in gelb (wenig Änderungen) bzw. rot (viele Änderungen) aufgelistet und diese werden uns später in den Sog des Editieren ziehen :)
+Mit dem Klick auf das Pfeilsymbol "/\" bzw. den Wikisource-Link mit einem [Link](https://de.wikisource.org/wiki/Index:Die_Gartenlaube_(1898)) "Index:Die_Gartenlaube_(1898)" sind weitere zu korrigierende Seiten in gelb (wenig Änderungen) bzw. rot (viele Änderungen) aufgelistet und diese werden uns später in den Sog des Editieren ziehen :)
 
 ![alt-text](https://github.com/DieDatenlaube/DieDatenlaube/blob/master/pics/Die_Gartenlaube_1898_Index.jpg "Indexseite der Gartenlaube 1898")
 

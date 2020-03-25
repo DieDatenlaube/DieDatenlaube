@@ -1,0 +1,30 @@
+
+SELECT ?people ?peopleLabel ?people_label ?painting ?painted ?painting_label ?image ?srstr (IRI(CONCAT("https://de.wikisource.org/wiki/",?WikiSourcePage)) AS ?WikiSourUrl) ?WikiSourceSnippet
+WHERE 
+{
+  ?exhibtion  wdt:P31 wd:Q667276.
+  ?exhibtion  wdt:P276 wd:Q14545380.
+  ?exhibtion  wdt:P710 ?people.
+  ?painting wdt:P170 ?people.
+  ?painting wdt:P571 ?painted;
+            rdfs:label ?painting_label.
+  ?people rdfs:label ?people_label. 
+  FILTER(LANG(?people_label)="de")
+  FILTER(LANG(?painting_label)="de")
+  BIND (CONCAT(?people_label, " ", ?painting_label) AS ?srstr)
+  optional {
+    ?painting wdt:P18 ?image
+  }
+  FILTER (?painted <= "1861-01-01T00:00:00Z"^^xsd:dateTime)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],de,en". }
+  SERVICE wikibase:mwapi {
+     bd:serviceParam wikibase:api "Search" .
+     bd:serviceParam wikibase:endpoint "de.wikisource.org" .
+     #bd:serviceParam mwapi:titles ?wikisourcePage .
+     bd:serviceParam mwapi:srsearch ?srstr.
+     #Output  
+     ?WikiSourcePage wikibase:apiOutput mwapi:title.     
+     ?WikiSourceSnippet wikibase:apiOutput "@snippet" .
+  }
+  
+} ORDER BY ?peopleLabel

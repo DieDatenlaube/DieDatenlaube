@@ -29,7 +29,7 @@ Unter 1) sollten auch noch etwa vorhandene [Autoren](https://de.wikisource.org/w
 
 ## Wikidata-Artikel prüfen und anlegen
 
-Nachdem wir nun einen Artikel https://de.wikisource.org/wiki/Allerei_von_Reinecke angelegt haben, wird es Zeit, diesen auch in Wikidata anzulegen, um ihn am Ende mit weiteren Metadaten anreichern können. Dazu klicken wir auf "[Create a new item](https://www.wikidata.org/wiki/Special:NewItem)"
+Nachdem wir nun einen Artikel https://de.wikisource.org/wiki/Allerlei_von_Reinecke angelegt haben, wird es Zeit, diesen auch in Wikidata anzulegen, um ihn am Ende mit weiteren Metadaten anreichern können. Dazu klicken wir auf "[Create a new item](https://www.wikidata.org/wiki/Special:NewItem)"
 
 ![alt-text](https://github.com/DieDatenlaube/DieDatenlaube/blob/master/pics/Die_Gartenlaube_1898_Wikidata.jpg "Create a new item for Die Gartenlaube")
 

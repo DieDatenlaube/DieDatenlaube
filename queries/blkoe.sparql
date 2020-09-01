@@ -1,0 +1,12 @@
+#defaultView:Graph
+SELECT DISTINCT ?blkoe ?blkoeLabel ?image ?artikel ?artikelLabel ?edgeLabel WHERE {
+  ?artikel wdt:P1433 wd:Q655617;
+    wdt:P921 ?schlagwort.
+  ?schlagwort wdt:P31 wd:Q5; wdt:P18 ?image.
+  ?blkoe wdt:P1433 wd:Q665807;
+         wdt:P31 wd:Q19389637;
+    wdt:P921 ?schlagwort.
+  BIND("Thema in" AS ?edgeLabel)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+ORDER BY ?schlagwort

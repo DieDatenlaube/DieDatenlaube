@@ -1,0 +1,13 @@
+# see also https://de.wikipedia.org/wiki/Benutzer:Erfurth/DieDatenlaube/Sachsen (ListeriaBot)
+
+#defaultView:Map
+SELECT ?item ?itemLabel ?city ?cityLabel ?coord
+WHERE 
+{
+ ?item wdt:P31 wd:Q191067.
+ ?item wdt:P1433 wd:Q655617.
+ ?item wdt:P921 ?city.
+ ?city wdt:P7046 ?hov.
+ ?city wdt:P625 ?coord.
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}

@@ -8,4 +8,4 @@ SELECT ?StadtLabel (COUNT(*) AS ?count) WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
 GROUP BY ?StadtLabel
-ORDER BY (?count)
+ORDER BY DESC (?count)

@@ -6,9 +6,8 @@ This repository containing scripts, documentation and data around the project [#
 * [Die Datenlaube Blog](https://diedatenlaube.github.io)
 
 ## Scripts
-
 * [ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb](ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb) - Jupyter Notebook to parse a Wikitemplate on German Wikisource and creating a QuickStatements-Import
-* [Analyzing_WikidataItems.ipynb](Analyzing_WikidataItems.ipynb) Jupyter Notebook to analyze existing Items of the journal (average number and distribution of Statements etc.)
+
 
 ## Queries
 * [Die Stadt- oder Siedlungsschnecke](queries/Stadtschnecke.sparql) - Räumliche Verteilung der Inhalte der Gartenlaube Artikel

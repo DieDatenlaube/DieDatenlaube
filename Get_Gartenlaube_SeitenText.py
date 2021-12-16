@@ -61,10 +61,10 @@ for SubCat in Gartenlaube_SubCat:
     PARAMS = {
     "action": "query",
     "gcmtitle": SubCat["title"],
-    "gcmnamespace":102,
     "gcmlimit": 500,
+    "gcmnamespace":102,
     "generator": "categorymembers",
-    "prop": "proofread",
+    "prop": "proofread|info",
     "format": "json"
     }
 
@@ -81,6 +81,7 @@ for SubCat in Gartenlaube_SubCat:
             pagedet["pageid"] = Gartenlaube_Seiten[Pages]["pageid"]
             pagedet["title"] = Gartenlaube_Seiten[Pages]["title"]
             pagedet["proofread"] = Gartenlaube_Seiten[Pages]["proofread"]
+            pagedet["lastrevid"] = Gartenlaube_Seiten[Pages]["lastrevid"]
             catPages.append(pagedet)
 
         try:
@@ -89,11 +90,11 @@ for SubCat in Gartenlaube_SubCat:
             DATA = R.json()
             Gartenlaube_Seiten = DATA["query"]["pages"]
             for Pages in Gartenlaube_Seiten:
-                print(Gartenlaube_Seiten[Pages])
                 pagedet = {}
                 pagedet["pageid"] = Gartenlaube_Seiten[Pages]["pageid"]
                 pagedet["title"] = Gartenlaube_Seiten[Pages]["title"]
                 pagedet["proofread"] = Gartenlaube_Seiten[Pages]["proofread"]
+                pagedet["lastrevid"] = Gartenlaube_Seiten[Pages]["lastrevid"]
                 catPages.append(pagedet)
                 #print(Pages["title"])
         except KeyError:
@@ -122,7 +123,6 @@ pages.append(retDict)
 
 # In[6]:
 
-
 import mwparserfromhell
 import time
 import json
@@ -147,6 +147,8 @@ for page in pages[0]:
         SeitenTextDet = {}
         SeitenTextDet["pageid"] = wikisourcePage["pageid"]
         SeitenTextDet["title"] = wikisourcePage["title"]
+        SeitenTextDet["proofread"] = wikisourcePage["proofread"]
+        SeitenTextDet["lastrevid"] = wikisourcePage["lastrevid"]
         SeitenTextDet["html"] = DATA["parse"]["text"]["*"]
         SeitenTextDet["wikitext"] = DATA["parse"]["wikitext"]["*"]
         wikicode = mwparserfromhell.parse(SeitenTextDet["wikitext"] )
@@ -156,7 +158,6 @@ for page in pages[0]:
     f = open("output/GartenlaubeSeitenText_"+page+"_"+str(time.time())[0:10]+".json", "w")
     print(json.dumps(SeitenText),file=f)
     f.close()      
-        
 
 
 # ### 4. Merge der Jahrgangs-Files

@@ -13,6 +13,13 @@ This repository containing scripts, documentation and data around the project [#
 * [Analyzing_WikidataItems.ipynb](Notebooks/Analyzing_WikidataItems.ipynb) - Analysen der bereits mit Wikidata verknüpften Gartenlaube-Artikel hinsichtlich Datenqualität
 * [RIS_Export-Gartenlaube_Krieg1870.ipynb](Notebooks/RIS_Export-Gartenlaube_Krieg1870.ipynb) - RIS-Export von Gartenlaube-Artikeln zum Deutsch-Französischen Krieg 1870/71
 
+## Scripts
+* [run.py](run.py) - Python-Version des Notebooks `ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb`: durchläuft ab `Kategorie:Die_Gartenlaube_Artikel` alle Unterkategorien und Seiten auf de.wikisource, liest bei fehlendem Wikidata-Item die Vorlage `{{Textdaten}}` aus und schreibt JSON-Ergebnis, existierende QIDs, QuickStatements-TSV und eine Logdatei nach `output/`. Start mit `python3 run.py` (benötigt `requests` und `SPARQLWrapper`). Die Einzelmodule liegen in [src/](src/):
+  * [src/wikisource_api.py](src/wikisource_api.py) - MediaWiki-API-Aufrufe (CategoryMembers inkl. Paginierung, QID, Permalink, Wikitext)
+  * [src/sparql_query.py](src/sparql_query.py) - SPARQL-Abfragen gegen QLever/Wikidata (Massenabfrage aller Gartenlaube-Artikel)
+  * [src/quickstatements.py](src/quickstatements.py) - Aufbau der QuickStatements-TSV für den Wikidata-Import
+  * [src/textdaten.py](src/textdaten.py) - Auslesen der `{{Textdaten}}`-Metadaten aus dem Wikitext
+  * [src/logging_setup.py](src/logging_setup.py) - Logging in Datei und Konsole (ersetzt die print-Ausgaben des Notebooks)
 
 ## Queries
 * [Die Stadt- oder Siedlungsschnecke](queries/Stadtschnecke.sparql) - Räumliche Verteilung der Inhalte der Gartenlaube Artikel

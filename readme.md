@@ -5,8 +5,13 @@ This repository containing scripts, documentation and data around the project [#
 ## Blog
 * [Die Datenlaube Blog](https://diedatenlaube.github.io)
 
-## Scripts
-* [ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb](ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb) - Jupyter Notebook to parse a Wikitemplate on German Wikisource and creating a QuickStatements-Import
+## Jupyter Notebooks
+* [ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb](Notebooks/ParseWikiSource_ByCategories__GartenlaubeArtikelParser.ipynb) - **Original** & **Datenlaube-Core** Jupyter Notebook to parse Wikicategory "Die Gartenlaube" and extract the Wiki-Infotemplate on German Wikisource and creating a QuickStatements-Import
+* [Get_Gartenlaube_SeitenText.ipynb](Notebooks/Get_Gartenlaube_SeitenText.ipynb) - Jupyter Notebook to get the full text transcriptions of all Die Gartenlaube articles in Wikisource
+* [ExtractGartenlaubeImages_byCategories.ipynb](Notebooks/ExtractGartenlaubeImages_byCategories.ipynb) - Extrahiert freigestellte Illustrationen der Gartenlaube aus den Wikisource-Artikeln
+* [Split_Pages_Articles.ipynb](Notebooks/Split_Pages_Articles.ipynb) - Bereinigt Seiten- und Heftangaben bei Artikeln, die über mehrere Ausgaben verteilt erschienen sind
+* [Analyzing_WikidataItems.ipynb](Notebooks/Analyzing_WikidataItems.ipynb) - Analysen der bereits mit Wikidata verknüpften Gartenlaube-Artikel hinsichtlich Datenqualität
+* [RIS_Export-Gartenlaube_Krieg1870.ipynb](Notebooks/RIS_Export-Gartenlaube_Krieg1870.ipynb) - RIS-Export von Gartenlaube-Artikeln zum Deutsch-Französischen Krieg 1870/71
 
 
 ## Queries

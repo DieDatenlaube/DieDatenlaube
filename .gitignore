@@ -1,4 +1,9 @@
-/output
-/workfiles
+workfiles/
 .ipynb_checkpoints/
+*__pycache__/
+
 .~lock.*
+*.txt
+*.tsv
+output/*.json
+*.ris
